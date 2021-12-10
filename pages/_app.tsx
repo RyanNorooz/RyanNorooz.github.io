@@ -1,8 +1,8 @@
 import 'tailwindcss/tailwind.css'
 
-import '@/styles/IRANSansX/IRANSansX.css'
+import '@/public/fonts/IRANSansX/IRANSansX.css'
 import '@/styles/styles.scss'
-import '@/styles/globals.scss'
+import '@/styles/main.scss'
 
 import type { AppProps } from 'next/app'
 import type { NextPage } from 'next'

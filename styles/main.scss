@@ -6,8 +6,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+:root {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -15,11 +14,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: #fff;
-  color: #111;
-
   font-family: $FONT_EN;
   font-weight: 400;
+}
+
+html,
+body {
+  background: #fff;
+  color: #111;
 }
 
 @media (prefers-color-scheme: dark) {
