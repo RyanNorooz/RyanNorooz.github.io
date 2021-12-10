@@ -1,0 +1,49 @@
+@import 'https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap';
+
+@import 'flaticon/flaticon.css';
+@import 'fontawesome/font-awesome.min.css';
+
+@import 'variables.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  scroll-behavior: smooth;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: #fff;
+  color: #111;
+
+  font-family: $FONT_FA;
+  font-weight: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #121212;
+    color: #e8e8e8;
+  }
+}
+
+// explicitly make every page 100vh
+html,
+body,
+#__next {
+  min-height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

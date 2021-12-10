@@ -1,0 +1,9 @@
+.next/
+nodemodules/
+dist/
+
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+*.min.*
