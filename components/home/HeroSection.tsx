@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Icon } from '@iconify/react'
-
 import stickDudeArt from '@/public/img/stick-dude.png'
 
 export default function HeroSection() {

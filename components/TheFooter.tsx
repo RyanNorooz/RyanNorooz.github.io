@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react'
 export default function TheFooter() {
   return (
     <footer className="footer section">
-      <div className="footer__container bd-grid">
+      <div className="pb-10 footer__container bd-grid">
         <div className="footer__data">
           <h2 className="footer__title">Ryan Norooz</h2>
           <p className="footer__text">

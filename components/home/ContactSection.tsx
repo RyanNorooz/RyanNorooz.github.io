@@ -40,7 +40,11 @@ export default function ContactSection() {
             className="contact__input"
           />
 
-          <input type="submit" value="SEND" className="contact__button" />
+          <input
+            type="submit"
+            value="SEND"
+            className="contact__button font-bold"
+          />
         </form>
       </div>
     </section>

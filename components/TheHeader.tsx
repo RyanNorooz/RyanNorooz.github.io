@@ -2,7 +2,8 @@ import { Icon } from '@iconify/react'
 import { useEffect } from 'react'
 
 function makeHeaderTransparent() {
-  const headerBlurBackdrop = document.getElementsByClassName('header-backdrop-blur')[0]
+  const headerBlurBackdrop = document.querySelector('.header-backdrop-blur')
+  if (!headerBlurBackdrop) return
 
   window.scrollY > window.innerHeight - 30
     ? headerBlurBackdrop.classList.add('opaque')
