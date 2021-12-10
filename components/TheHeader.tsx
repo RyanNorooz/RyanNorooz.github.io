@@ -2,8 +2,6 @@ import { Icon } from '@iconify/react'
 import { useEffect } from 'react'
 
 function makeHeaderTransparent() {
-  console.log('#######################')
-
   const header = document.getElementsByClassName('l-header')[0]
 
   window.scrollY > 700

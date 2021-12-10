@@ -1,5 +1,3 @@
-import Head from 'next/head'
-
 import TheHeader from '@/components/TheHeader'
 import TheFooter from '@/components/TheFooter'
 
