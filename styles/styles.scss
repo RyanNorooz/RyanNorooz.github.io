@@ -1,6 +1,6 @@
 /*===== VARIABLES CSS =====*/
 :root {
-  --header-height: 3rem;
+  --header-height: 3.5rem;
   --font-medium: 500;
 }
 /*===== Colores =====*/
@@ -58,7 +58,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  margin: var(--header-height) 0 0 0;
+  // margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
@@ -126,12 +126,16 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background: transparent;
-  backdrop-filter: blur(5px);
-  transition: background 0.5s cubic-bezier(0, 0, 0.25, 1);
-}
 
-.l-header.opaque {
-  background: rgba(24, 24, 24, 0.8);
+  .header-backdrop-blur {
+    backdrop-filter: blur(5px);
+    transition: background 0.5s cubic-bezier(0, 0, 0.25, 1);
+
+    &.opaque {
+      background: rgba(24, 24, 24, 0.8);
+      box-shadow: 0 0 10px #0001;
+    }
+  }
 }
 
 /*===== NAV =====*/
@@ -143,15 +147,17 @@ img {
 
   &__menu {
     @media screen and (max-width: 768px) {
+      @apply bg-neutral-100/30 dark:bg-neutral-800/70 rounded-xl;
+      box-shadow: 0 5px 15px 0 rgb(0 0 0 / 0.4);
       position: fixed;
-      top: var(--header-height);
+      top: calc(var(--header-height));
       right: -100%;
-      width: 80%;
-      height: 100%;
+      width: clamp(12ch, 50%, 25ch);
+      height: auto;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.3);
+      // background: rgba(255, 255, 255, 0.3);
       transition: 0.5s;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(15px);
     }
   }
   &__item {
@@ -198,7 +204,7 @@ img {
   height: 100%;
 
   &__container {
-    height: calc(100vh - var(--header-height));
+    height: 100vh;
     grid-template-rows: 1.7fr 1fr 1fr;
     row-gap: 1rem;
   }
@@ -460,7 +466,7 @@ img {
   }
 
   .nav {
-    height: calc(var(--header-height) + 1rem);
+    height: calc(var(--header-height) + 0.5rem);
 
     &__list {
       display: flex;

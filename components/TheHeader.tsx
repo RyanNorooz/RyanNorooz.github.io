@@ -2,11 +2,11 @@ import { Icon } from '@iconify/react'
 import { useEffect } from 'react'
 
 function makeHeaderTransparent() {
-  const header = document.getElementsByClassName('l-header')[0]
+  const headerBlurBackdrop = document.getElementsByClassName('header-backdrop-blur')[0]
 
-  window.scrollY > 700
-    ? header.classList.add('opaque')
-    : header.classList.remove('opaque')
+  window.scrollY > window.innerHeight - 30
+    ? headerBlurBackdrop.classList.add('opaque')
+    : headerBlurBackdrop.classList.remove('opaque')
 }
 
 export default function TheHeader() {
@@ -17,6 +17,7 @@ export default function TheHeader() {
 
   return (
     <header className="l-header">
+      <div className="header-backdrop-blur absolute w-full h-[var(--header-height)] pointer-events-none -z-10" />
       <nav className="nav bd-grid">
         <div>
           <a href="#" className="nav__logo">
@@ -54,7 +55,13 @@ export default function TheHeader() {
           </ul>
         </div>
 
-        <div className="nav__toggle" id="nav-toggle">
+        <div
+          className="nav__toggle"
+          id="nav-toggle"
+          onClick={() => {
+            document.getElementById('nav-menu')?.classList.toggle('show')
+          }}
+        >
           <Icon icon="bx:bx-menu" />
         </div>
       </nav>
