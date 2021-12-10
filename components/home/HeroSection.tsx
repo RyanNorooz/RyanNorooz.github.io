@@ -1,80 +1,33 @@
 import Image from 'next/image'
+import { Icon } from '@iconify/react'
+
+import stickDudeArt from '@/public/img/stick-dude.png'
 
 export default function HeroSection() {
   return (
-    <div className="sigma_banner style-7">
-      <div
-        className="bg-center bg-cover banner-slider-inner"
-        style={{ backgroundImage: `url("/images/home-2/1920x900.jpg")` }}
-      >
-        <div className="sigma_banner-text">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 filter drop-shadow-md">
-                <p className=" !mb-12 inline bg-black">محصولات چرمی</p>
+    <section className="home" id="home">
+      <div className="home__container bd-grid">
+        <h1 className="home__title font-extrablack drop-shadow-[0_15px_10px_rgba(0,0,0,.5)]">
+          HE
+          <br />
+          LLO.
+        </h1>
 
-                <h1 className="title !font-black ">
-                  <span className="primary-color">چرم</span> گردو
-                </h1>
-              </div>
-            </div>
+        <p className="pl-2 home__subtitle font-semibold">
+          Thank you for invading my space.
+        </p>
 
-            <div className="row d-none d-md-flex">
-              <div className="col-lg-3 col-md-4">
-                <div className="sigma_category style-3">
-                  <a href="shop.html">
-                    <img src="/images/home-2/500.jpg" alt="category" />
+        <div className="home__scroll">
+          <a href="#about" className="flex items-center home__scroll-link">
+            <Icon icon="bx:bx-up-arrow-alt" />
+            Scroll down
+          </a>
+        </div>
 
-                    <div className="sigma_category-content filter drop-shadow-sm">
-                      <h6>Leather Jacket</h6>
-                      <span>345 Items</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-4">
-                <div className="sigma_category style-3">
-                  <a href="shop.html">
-                    <img src="/images/home-2/500-0.jpg" alt="category" />
-
-                    <div className="sigma_category-content filter drop-shadow-sm">
-                      <h6>Leather Wallet</h6>
-                      <span>229 Items</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-4">
-                <div className="sigma_category style-3">
-                  <a href="shop.html">
-                    <img src="/images/home-2/500-1.jpg" alt="category" />
-
-                    <div className="sigma_category-content filter drop-shadow-sm">
-                      <h6>Leather Shoes</h6>
-                      <span>141 Items</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div className="col-lg-3 col-md-4">
-                <div className="sigma_category style-3">
-                  <a href="shop.html">
-                    <img src="/images/home-2/500-2.jpg" alt="category" />
-
-                    <div className="sigma_category-content filter drop-shadow-sm">
-                      <h6>Leather Bags</h6>
-                      <span>428 Items</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="home__img drop-shadow-[0_0_5px_rgba(0,0,0,.5)]">
+          <Image src={stickDudeArt} alt="stick dude graphic art" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

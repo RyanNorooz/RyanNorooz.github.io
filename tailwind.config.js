@@ -12,4 +12,12 @@ module.exports = {
     require('@tailwindcss/typography'),
     // ...
   ],
+
+  theme: {
+    extend: {
+      fontWeight: {
+        extrablack: 950,
+      },
+    },
+  },
 }

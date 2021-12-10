@@ -6,14 +6,11 @@ import TheFooter from '@/components/TheFooter'
 const DefaultLayout: React.FC = function ({ children }) {
   return (
     <>
-      <Head>
-        <title>Charme Gerdoo</title>
-      </Head>
-
       <TheHeader />
       <main>{children}</main>
       <TheFooter />
     </>
   )
 }
+
 export default DefaultLayout
