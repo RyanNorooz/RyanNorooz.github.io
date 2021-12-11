@@ -40,8 +40,7 @@ jobs:
 
       - name: Set ENV variables 📝
         if: ${{ github.event.repository.name }} != ${{ github.repository_owner }}.github.io
-        env:
-          BASE_URL: /${{ github.event.repository.name }}/
+        run: echo ::set-env BASE_URL=/${{ github.event.repository.name }}/
 
       - name: Build 🔨
         run: |
