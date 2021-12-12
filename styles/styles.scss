@@ -205,6 +205,62 @@ img {
   background: var(--c-primary);
 }
 
+$default-text-shadow-color: #aaaaaa;
+$default-text-shadow-h-offset: 0px;
+$default-text-shadow-v-offset: 0px;
+$default-text-shadow-blur: 1px;
+$default-text-shadow-spread: false;
+
+@mixin text-shadow($shadow...) {
+  $shadow: if(length($shadow) > 0, $shadow, default);
+  $default: -compass-space-list(
+    compact(
+      $default-text-shadow-h-offset $default-text-shadow-v-offset
+        $default-text-shadow-blur $default-text-shadow-spread
+        $default-text-shadow-color
+    )
+  );
+  $shadows-without-spread: join((), (), comma);
+  $shadows: join((), (), comma);
+  $has-spread: false;
+  @each $layer in $shadow {
+    $layer: if($layer == 'default', $default, $layer);
+    @if length($layer) > 4 {
+      $has-spread: true;
+      $shadows-without-spread: append(
+        $shadows-without-spread,
+        nth($layer, 1) nth($layer, 2) nth($layer, 3) nth($layer, 5)
+      );
+      $shadows: append($shadows, $layer);
+    } @else {
+      $shadows-without-spread: append($shadows-without-spread, $layer);
+      $shadows: append($shadows, $layer);
+    }
+  }
+  @if $has-spread {
+    text-shadow: $shadows-without-spread;
+  }
+  text-shadow: $shadows;
+}
+
+@function shadow($s-color, $s-start, $s-width) {
+  $output: '';
+  $a: $s-start;
+  $x: $a;
+  $y: $a;
+  $i: 0.0025em;
+  $s-size: $s-width + $s-start;
+  @while $x <= ($s-size + $i) {
+    $output: $output + '#{$x} #{$y} 0 #{$s-color}';
+    @if ($s-size + 0) >= $x {
+      $output: $output + ', ';
+    }
+    $y: $y + $i;
+    $x: $x + $i;
+  }
+  @return unquote($output);
+}
+
 /*===== HOME =====*/
 .home {
   position: relative;
@@ -223,10 +279,17 @@ img {
     font-size: var(--big-font-size);
     color: var(--white-color);
     line-height: 0.8;
+    @include text-shadow(shadow(#288fac, -0.1em, 0.1em));
 
-    span {
-      text-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+    &::selection {
+      background: transparent;
+      text-shadow: none;
+      @include text-shadow(shadow(#f04e26, -0.1em, 0.1em));
     }
+
+    // span {
+    //   text-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+    // }
   }
   &__subtitle {
     align-self: flex-start;
