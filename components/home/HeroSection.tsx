@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="home" id="home">
       <div className="home__container bd-grid">
-        <h1 className="home__title font-extrablack drop-shadow-[0_15px_10px_rgba(0,0,0,.5)]">
+        <h1 className="home__title font-extrablack drop-shadow-[.07em_.1em_.07em_rgba(0,0,0,.4)]">
           HE
           <br />
           LLO.

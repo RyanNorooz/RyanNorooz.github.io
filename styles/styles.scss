@@ -6,7 +6,7 @@
 
 /*===== Colors =====*/
 :root {
-  --first-color: #5361ff;
+  --c-primary: #5361ff;
   --white-color: #fafaff;
   --theme-text-color: #2a3b47;
   --text-color: #697477;
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --first-color: #5361ff;
+    --c-primary: #5361ff;
     --white-color: #fafaff;
     --theme-text-color: #61bdff;
     --text-color: ##acc3da;
@@ -108,7 +108,7 @@ img {
       right: 0;
       margin: auto;
       top: 2rem;
-      background: var(--first-color);
+      background: var(--c-primary);
     }
   }
 }
@@ -177,7 +177,7 @@ img {
     color: var(--theme-text-color);
 
     &:hover {
-      color: var(--first-color);
+      color: var(--c-primary);
     }
   }
   &__logo {
@@ -202,13 +202,13 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background: var(--first-color);
+  background: var(--c-primary);
 }
 
 /*===== HOME =====*/
 .home {
   position: relative;
-  background: var(--first-color);
+  background: var(--c-primary);
   overflow: hidden;
   height: 100%;
 
@@ -267,7 +267,7 @@ img {
     padding-top: 1rem;
     width: 120px;
     height: 120px;
-    background: var(--first-color);
+    background: var(--c-primary);
     border-radius: 50%;
     overflow: hidden;
 
@@ -277,7 +277,7 @@ img {
   }
   &__subtitle {
     font-size: var(--h2-font-size);
-    color: var(--first-color);
+    color: var(--c-primary);
     margin-bottom: var(--mb-1);
   }
   &__text {
@@ -295,7 +295,7 @@ img {
       margin: 0 var(--mb-1);
 
       &:hover {
-        color: var(--first-color);
+        color: var(--c-primary);
       }
     }
   }
@@ -307,7 +307,7 @@ img {
     row-gap: 2rem;
   }
   &__subtitle {
-    color: var(--first-color);
+    color: var(--c-primary);
     margin-bottom: var(--mb-3);
   }
   &__name {
@@ -322,7 +322,7 @@ img {
     border-radius: 0.25rem;
 
     &:hover {
-      background: var(--first-color);
+      background: var(--c-primary);
       color: var(--white-color);
     }
   }
@@ -383,7 +383,7 @@ img {
 
   &__subtitle {
     font-size: var(--normal-font-size);
-    color: var(--first-color);
+    color: var(--c-primary);
   }
 
   &__text {
@@ -413,7 +413,7 @@ img {
 
   &__button {
     display: block;
-    background: var(--first-color);
+    background: var(--c-primary);
     color: var(--white-color);
     padding: 0.75rem 2.5rem;
     margin-left: auto;
@@ -442,7 +442,7 @@ img {
     padding: 0.25rem 0;
 
     &:hover {
-      color: var(--first-color);
+      color: var(--c-primary);
     }
   }
   &__social {
@@ -450,7 +450,7 @@ img {
     margin-right: var(--mb-1);
 
     &:hover {
-      color: var(--first-color);
+      color: var(--c-primary);
     }
   }
 }
