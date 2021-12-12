@@ -16,10 +16,7 @@ export default function Home() {
       <AboutMeSection />
       <SkillsSection />
       <PortfolioSection />
-
-      <div className="blur-content">
-        <ContactSection />
-      </div>
+      <ContactSection />
     </>
   )
 }

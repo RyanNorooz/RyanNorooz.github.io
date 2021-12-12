@@ -57,7 +57,7 @@ export default function PortfolioSection() {
     <section className="portfolio section" id="portfolio">
       <h2 className="section-title">Portfolio</h2>
 
-      <div className="portfolio__container bd-grid">
+      <div className="portfolio__container bd-grid blur-content">
         {projects.map((project, index) => (
           <div key={index} className="portfolio__img">
             <Image src={project.image} alt={project.title} />
