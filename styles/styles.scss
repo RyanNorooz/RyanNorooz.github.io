@@ -3,7 +3,8 @@
   --header-height: 3.5rem;
   --font-medium: 500;
 }
-/*===== Colores =====*/
+
+/*===== Colors =====*/
 :root {
   --first-color: #5361ff;
   --white-color: #fafaff;
@@ -15,12 +16,12 @@
   :root {
     --first-color: #5361ff;
     --white-color: #fafaff;
-    --dark-color: #3b79a5;
-    --text-color: #697477;
+    --dark-color: #61bdff;
+    --text-color: ##acc3da;
   }
 }
 
-/*===== Fuente y tipografia =====*/
+/*===== Typography =====*/
 :root {
   --body-font: 'Montserrat', sans-serif;
 
@@ -36,14 +37,16 @@
     --small-font-size: 0.875rem;
   }
 }
-/*===== Margenes =====*/
+
+/*===== Margins =====*/
 :root {
   --mb-1: 0.5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
   --mb-4: 2rem;
 }
-/*===== z index =====*/
+
+/*===== z indexes =====*/
 :root {
   --z-fixed: 100;
 }
@@ -105,10 +108,11 @@ img {
       right: 0;
       margin: auto;
       top: 2rem;
-      background-color: var(--first-color);
+      background: var(--first-color);
     }
   }
 }
+
 /*===== LAYOUT =====*/
 .bd-grid {
   max-width: 1024px;
@@ -126,6 +130,7 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background: transparent;
+  text-shadow: 0 0 0.15rem #0008, 0 0 0.3rem #0008;
 
   .header-backdrop-blur {
     backdrop-filter: blur(5px);
@@ -144,20 +149,24 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 
   &__menu {
     @media screen and (max-width: 768px) {
-      @apply bg-neutral-100/30 dark:bg-neutral-800/70 rounded-xl;
-      box-shadow: 0 5px 15px 0 rgb(0 0 0 / 0.4);
+      @apply bg-white/80 dark:bg-neutral-800/70 rounded-xl;
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
+      box-shadow: 0 5px 15px 0 rgb(0, 0, 0, 0.3);
       position: fixed;
       top: calc(var(--header-height));
       right: -100%;
-      width: clamp(12ch, 50%, 25ch);
+      width: clamp(12ch, 50%, 20ch);
       height: auto;
       padding: 2rem;
       // background: rgba(255, 255, 255, 0.3);
       transition: 0.5s;
-      backdrop-filter: blur(15px);
+      backdrop-filter: blur(20px);
+      text-shadow: 0 0 0.5rem #0006;
     }
   }
   &__item {
@@ -193,18 +202,19 @@ img {
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background: var(--first-color);
 }
 
 /*===== HOME =====*/
 .home {
   position: relative;
-  background-color: var(--first-color);
+  background: var(--first-color);
   overflow: hidden;
   height: 100%;
 
   &__container {
-    height: 100vh;
+    height: 100%;
+    height: clamp(600px, 100vh, 100vh);
     grid-template-rows: 1.7fr 1fr 1fr;
     row-gap: 1rem;
   }
@@ -257,7 +267,7 @@ img {
     padding-top: 1rem;
     width: 120px;
     height: 120px;
-    background-color: var(--first-color);
+    background: var(--first-color);
     border-radius: 50%;
     overflow: hidden;
 
@@ -290,6 +300,7 @@ img {
     }
   }
 }
+
 /* ===== SKILLS =====*/
 .skills {
   &__container {
@@ -307,11 +318,11 @@ img {
     margin-right: var(--mb-2);
     margin-bottom: var(--mb-3);
     padding: 0.25rem 0.5rem;
-    // background-color: var(--white-color);
+    // background: var(--white-color);
     border-radius: 0.25rem;
 
     &:hover {
-      background-color: var(--first-color);
+      background: var(--first-color);
       color: var(--white-color);
     }
   }
@@ -321,9 +332,10 @@ img {
     }
   }
 }
+
 /* ===== PORTFOLIO =====*/
 .portfolio {
-  // background-color: var(--white-color);
+  // background: var(--white-color);
 
   &__container {
     justify-items: center;
@@ -361,19 +373,23 @@ img {
     }
   }
 }
+
 /* ===== CONTACT =====*/
 .contact {
   &__container {
     row-gap: 2rem;
   }
+
   &__subtitle {
     font-size: var(--normal-font-size);
     color: var(--first-color);
   }
+
   &__text {
     display: inline-block;
     margin-bottom: var(--mb-2);
   }
+
   &__inputs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -382,6 +398,7 @@ img {
       @apply bg-neutral-100 dark:bg-neutral-800;
     }
   }
+
   &__input {
     @apply bg-neutral-100 dark:bg-neutral-800;
     width: 100%;
@@ -392,9 +409,10 @@ img {
     margin-bottom: var(--mb-4);
     border-radius: 0.5rem;
   }
+
   &__button {
     display: block;
-    background-color: var(--first-color);
+    background: var(--first-color);
     color: var(--white-color);
     padding: 0.75rem 2.5rem;
     margin-left: auto;
@@ -405,9 +423,11 @@ img {
     cursor: pointer;
   }
 }
+
 /* ===== FOOTER=====*/
 .footer {
-  background-color: var(--dark-color);
+  background: var(--dark-color);
+  color: var(--text-color);
 
   &__container {
     row-gap: 2rem;
@@ -415,7 +435,7 @@ img {
   &__title {
     font-size: var(--normal-font-size);
     color: var(--white-color);
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb -2);
   }
   &__link {
     padding: 0.25rem 0;
@@ -435,20 +455,24 @@ img {
 }
 
 /* ===== MEDIA QUERIES=====*/
+
 /* For tall screens on mobiles y desktop*/
 @media screen and (min-height: 721px) {
   .home {
-    &__container {
-      height: 640px;
-    }
+    // &__container {
+    //   height: 640px;
+    // }
     &__img {
       width: 250px;
-      right: 24%;
+      right: 10%;
     }
   }
 }
 
-@media screen and(min-width: 768px) {
+@media screen and (min-width: 768px) {
+  :root {
+    --header-height: 4rem;
+  }
   body {
     margin: 0;
   }
@@ -466,8 +490,6 @@ img {
   }
 
   .nav {
-    height: calc(var(--header-height) + 0.5rem);
-
     &__list {
       display: flex;
     }
@@ -487,14 +509,14 @@ img {
     }
   }
   .active::after {
-    background-color: var(--white-color);
+    background: var(--white-color);
   }
 
   .home {
     &__container {
-      height: 100vh;
+      // height: 100vh;
       grid-template-rows: 1.7fr 0fr 1fr;
-      row-gap: 0;
+      // row-gap: 0;
     }
     &__img {
       width: 350px;
@@ -564,5 +586,18 @@ img {
 @media screen and (max-width: 320px) {
   .home__img {
     width: 150px;
+  }
+}
+
+.blur-content {
+  position: relative;
+
+  &::after {
+    @apply absolute grid place-items-center text-2xl drop-shadow-sm inset-0 w-full h-full dark:bg-neutral-600/10 dark:shadow-black/30;
+    content: 'In Progress...';
+
+    box-shadow: inset 0 0 30px 10px var(--tw-shadow-color);
+    backdrop-filter: blur(10px);
+    text-shadow: 0 5px 10px #0006;
   }
 }

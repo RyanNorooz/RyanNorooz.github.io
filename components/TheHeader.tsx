@@ -4,16 +4,28 @@ import { useEffect } from 'react'
 function makeHeaderTransparent() {
   const headerBlurBackdrop = document.querySelector('.header-backdrop-blur')
   if (!headerBlurBackdrop) return
-
   window.scrollY > window.innerHeight - 30
     ? headerBlurBackdrop.classList.add('opaque')
     : headerBlurBackdrop.classList.remove('opaque')
 }
 
+function checkAndCloseHamburgerMenu(e: MouseEvent) {
+  const menuWasClicked = (e.target as HTMLElement).matches(
+    `.nav__menu, .nav__list, .nav__item, .nav__link,
+    .nav__toggle, .nav__toggle svg, .nav__toggle svg path`
+  )
+  if (menuWasClicked) return
+  document.getElementById('nav-menu')?.classList.toggle('show', false)
+}
+
 export default function TheHeader() {
   useEffect(() => {
     window.addEventListener('scroll', makeHeaderTransparent)
-    return () => window.removeEventListener('scroll', makeHeaderTransparent)
+    window.addEventListener('click', checkAndCloseHamburgerMenu)
+    return () => {
+      window.removeEventListener('scroll', makeHeaderTransparent)
+      window.removeEventListener('click', checkAndCloseHamburgerMenu)
+    }
   }, [])
 
   return (
@@ -33,21 +45,25 @@ export default function TheHeader() {
                 Home
               </a>
             </li>
+
             <li className="nav__item">
               <a href="#about" className="nav__link">
                 About
               </a>
             </li>
+
             <li className="nav__item">
               <a href="#skills" className="nav__link">
                 Skills
               </a>
             </li>
+
             <li className="nav__item">
               <a href="#portfolio" className="nav__link">
                 Portfolio
               </a>
             </li>
+
             <li className="nav__item">
               <a href="#contact" className="nav__link">
                 Contact
@@ -59,9 +75,9 @@ export default function TheHeader() {
         <div
           className="nav__toggle"
           id="nav-toggle"
-          onClick={() => {
+          onClick={() =>
             document.getElementById('nav-menu')?.classList.toggle('show')
-          }}
+          }
         >
           <Icon icon="bx:bx-menu" />
         </div>

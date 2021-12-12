@@ -26,7 +26,7 @@ export default function ContactSection() {
           <span className="contact__text">HELL</span>
         </div>
 
-        <form action="" className="contact__form">
+        <form className="contact__form">
           <div className="contact__inputs">
             <input type="text" placeholder="Name" className="contact__input" />
             <input type="mail" placeholder="Email" className="contact__input" />
