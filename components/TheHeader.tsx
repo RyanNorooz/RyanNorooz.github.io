@@ -39,7 +39,7 @@ export default function TheHeader() {
           <div className="mie-3 w-9 h-9">
             <Image src={faviconDark} alt="Ryan Norooz logo" />
           </div>
-          <a href="#" className="nav__logo">
+          <a href="#" className="nav__logo font-bold">
             Ryan Norooz
           </a>
         </div>

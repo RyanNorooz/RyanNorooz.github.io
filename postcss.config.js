@@ -19,7 +19,7 @@ module.exports = {
           },
 
           // https://cssnano.co/
-          // cssnano: {},
+          cssnano: {},
         }),
   },
 }
