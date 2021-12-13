@@ -1,5 +1,8 @@
+import Image from 'next/image'
 import { Icon } from '@iconify/react'
 import { useEffect } from 'react'
+
+import faviconDark from '@/public/favicon-dark.ico'
 
 function makeHeaderTransparent() {
   const headerBlurBackdrop = document.querySelector('.header-backdrop-blur')
@@ -32,7 +35,10 @@ export default function TheHeader() {
     <header className="l-header">
       <div className="header-backdrop-blur absolute w-full h-[var(--header-height)] pointer-events-none -z-10" />
       <nav className="nav bd-grid">
-        <div>
+        <div className="flex items-center">
+          <div className="m-3 w-9 h-9">
+            <Image src={faviconDark} alt="Ryan Norooz logo" />
+          </div>
           <a href="#" className="nav__logo">
             Ryan Norooz
           </a>
