@@ -1,0 +1,98 @@
+.stripe {
+  --stripe-size: 100px;
+  --color1: #c44;
+  --color2: #313131;
+  --duration: 2s;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  ::selection {
+    background: unset;
+  }
+
+  &_inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 8rem;
+    color: #fff0;
+
+    background: repeating-linear-gradient(
+      45deg,
+      var(--color2) 25%,
+      var(--color2) 50%,
+      var(--color1) 50%,
+      var(--color1) 75%
+    );
+    background-size: var(--stripe-size) var(--stripe-size);
+    -webkit-background-clip: text;
+    animation: stripeBackgroundPosition var(--duration) linear infinite;
+
+    &::selection {
+      background: #888a;
+      color: red;
+    }
+  }
+
+  // moving bg
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: calc(100% + var(--stripe-size));
+    height: 100%;
+    background: repeating-linear-gradient(
+      45deg,
+      var(--color1) 25%,
+      var(--color1) 50%,
+      var(--color2) 50%,
+      var(--color2) 75%
+    );
+    background-origin: border-box;
+    background-size: var(--stripe-size) var(--stripe-size);
+    animation: stripeTransform var(--duration) linear infinite;
+  }
+
+  // vignette
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #1b273500 0%, #090a0f 100%);
+  }
+}
+
+@keyframes stripeTransform {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(var(--stripe-size) * -1));
+  }
+}
+
+@keyframes stripeBackgroundPosition {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: calc(var(--stripe-size) * -1) 0;
+  }
+}
