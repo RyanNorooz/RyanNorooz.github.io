@@ -38,6 +38,7 @@ export default function ContactSection() {
             cols={0}
             rows={10}
             className="contact__input"
+            placeholder="Message"
           />
 
           <input

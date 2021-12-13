@@ -43,23 +43,26 @@ export default function TheFooter() {
         </div>
 
         <div className="footer__data">
-          <h2 className="footer__title">FOLLOW</h2>
+          <h2 className="footer__title">REACH ME</h2>
 
           <div className="flex">
             <a
               href="https://github.com/RyanNorooz"
+              title="Github"
               className="footer__social" //
             >
               <Icon icon="bx:bxl-github" />
             </a>
             <a
               href="https://t.me/RyanNorooz"
+              title="Telegram"
               className="footer__social" //
             >
               <Icon icon="bx:bxl-telegram" />
             </a>
             <a
               href="https://discord.com/users/701974919864385577"
+              title="Discord"
               className="footer__social"
             >
               <Icon icon="bx:bxl-discord-alt" />
