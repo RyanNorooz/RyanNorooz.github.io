@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import developerArt from '@/public/img/developer.svg'
+import developer2 from '@/public/img/developer2.svg'
 
 export default function SkillsSection() {
   const devSkills = [
@@ -19,6 +19,10 @@ export default function SkillsSection() {
       <h2 className="section-title">Skills</h2>
 
       <div className="skills__container bd-grid">
+        <div className="skills__img">
+          <Image src={developer2} alt="developer graphic art" />
+        </div>
+
         <div className="skills__box">
           <h3 className="skills__subtitle">Development</h3>
           {devSkills.map((skill, index) => (
@@ -33,10 +37,6 @@ export default function SkillsSection() {
               {skill}
             </span>
           ))}
-        </div>
-
-        <div className="skills__img">
-          <Image src={developerArt} alt="developer graphic art" />
         </div>
       </div>
     </section>
