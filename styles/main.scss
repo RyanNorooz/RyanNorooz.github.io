@@ -6,22 +6,25 @@
   box-sizing: border-box;
 }
 
-:root {
+html,
+body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: #111;
 
   font-family: $FONT_EN;
   font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-html,
-body {
-  background: #fff;
-  color: #111;
+html[lang='fa'] {
+  font-family: $FONT_FA;
+  direction: rtl;
 }
 
 @media (prefers-color-scheme: dark) {
