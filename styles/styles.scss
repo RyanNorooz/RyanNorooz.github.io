@@ -279,12 +279,12 @@ $default-text-shadow-spread: false;
     font-size: var(--big-font-size);
     color: var(--white-color);
     line-height: 0.8;
-    @include text-shadow(shadow(#288fac, -0.1em, 0.1em));
+    @include text-shadow(shadow(#149ec4, -0.06em, 0.06em));
 
     &::selection {
       background: transparent;
       text-shadow: none;
-      @include text-shadow(shadow(#f04e26, -0.1em, 0.1em));
+      @include text-shadow(shadow(#f04e26, -0.08em, 0.08em));
     }
 
     // span {
