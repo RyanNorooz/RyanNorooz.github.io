@@ -36,7 +36,7 @@ export default function TheHeader() {
       <div className="header-backdrop-blur absolute w-full h-[var(--header-height)] pointer-events-none -z-10" />
       <nav className="nav bd-grid">
         <div className="flex items-center">
-          <div className="m-3 w-9 h-9">
+          <div className="mie-3 w-9 h-9">
             <Image src={faviconDark} alt="Ryan Norooz logo" />
           </div>
           <a href="#" className="nav__logo">
