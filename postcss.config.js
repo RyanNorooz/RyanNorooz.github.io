@@ -3,6 +3,9 @@ module.exports = {
     // https://tailwindcss.com/
     tailwindcss: {},
 
+    /**
+     * disable plugins in dev environment
+     */
     ...(process.env.NODE_ENV === 'development'
       ? {} // No transformations in development
       : {
@@ -17,9 +20,6 @@ module.exports = {
               'custom-properties': false,
             },
           },
-
-          // https://cssnano.co/
-          cssnano: {},
         }),
   },
 }
