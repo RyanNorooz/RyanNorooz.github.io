@@ -10,6 +10,8 @@ export default function AboutMeSection() {
       <div className="about__container bd-grid">
         {/* <div className="about__img">
         </div> */}
+        
+        <Image src={developer1} alt="developer art graphic" />
 
         <div>
           <h2 className="about__subtitle">I&apos;m Ryan Norooz</h2>
@@ -47,8 +49,6 @@ export default function AboutMeSection() {
             </a>
           </div>
         </div>
-
-        <Image src={developer1} alt="developer art graphic" />
       </div>
     </section>
   )

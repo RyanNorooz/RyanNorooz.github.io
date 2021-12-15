@@ -90,7 +90,7 @@ img {
 
 /*===== CLASS CSS ===== */
 .section {
-  padding: 2rem 0;
+  padding: 2rem;
 
   &-title {
     position: relative;
@@ -313,7 +313,7 @@ $default-text-shadow-spread: false;
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 500px;
+    width: 150px;
   }
 }
 
@@ -519,9 +519,8 @@ $default-text-shadow-spread: false;
 }
 
 /* ===== MEDIA QUERIES=====*/
-
 /* For tall screens on mobiles y desktop*/
-@media screen and (min-height: 721px) {
+@media screen and (min-width: 400px) {
   .home {
     // &__container {
     //   height: 640px;
@@ -591,9 +590,14 @@ $default-text-shadow-spread: false;
   .about {
     &__container {
       grid-template-columns: repeat(2, 1fr);
+      direction: rtl;
       align-items: center;
       text-align: initial;
       padding: 4rem 0;
+      > * {
+      direction: initial;
+
+      }
     }
     &__social {
       justify-content: flex-start;
@@ -643,13 +647,6 @@ $default-text-shadow-spread: false;
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-/* For small devices */
-@media screen and (max-width: 320px) {
-  .home__img {
-    width: 150px;
   }
 }
 
