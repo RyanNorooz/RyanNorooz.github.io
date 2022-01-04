@@ -32,7 +32,7 @@
 
   @media screen and (min-width: 768px) {
     --big-font-size: 10.5rem;
-    --h2-font-size: 2rem;
+    --h2-font-size: 1.5rem;
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
   }
@@ -95,6 +95,7 @@ img {
   &-title {
     position: relative;
     font-size: var(--h2-font-size);
+    font-weight: 950;
     color: var(--theme-text-color);
     margin: var(--mb-4) 0;
     text-align: center;
@@ -166,8 +167,11 @@ img {
       // background: rgba(255, 255, 255, 0.3);
       transition: 0.5s;
       backdrop-filter: blur(20px);
-      text-shadow: 0 0 0.5rem #0006;
+      text-shadow: none;
     }
+  }
+  &__list {
+    filter: drop-shadow(0 0 0.5rem #0006);
   }
   &__item {
     margin-bottom: var(--mb-4);
@@ -351,7 +355,7 @@ $default-text-shadow-spread: false;
     }
   }
   &__subtitle {
-    font-size: var(--h2-font-size);
+    font-size: calc(var(--h2-font-size) + 0.5rem);
     color: var(--c-primary);
     margin-bottom: var(--mb-1);
   }
@@ -582,6 +586,8 @@ $default-text-shadow-spread: false;
   }
 
   .nav {
+    color: var(--white-color);
+
     &__list {
       display: flex;
     }

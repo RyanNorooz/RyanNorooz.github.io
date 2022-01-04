@@ -45,7 +45,7 @@ export default function TheHeader() {
           <div className="mie-3 w-9 h-9">
             <Image src={faviconDark} alt="Ryan Norooz logo" />
           </div>
-          <a href="#" className="nav__logo font-bold">
+          <a href="#" className="nav__logo font-extrablack">
             {t('header.logoText')}
           </a>
         </div>
@@ -88,7 +88,7 @@ export default function TheHeader() {
                 href={currentPath}
                 locale={router.locale === 'en' ? 'fa' : 'en'}
               >
-                <div className="flex items-center gap-1 cursor-pointer font-bold">
+                <div className="flex items-center gap-1 font-bold cursor-pointer">
                   <Icon icon="bx:bx-globe" />
                   {router.locale === 'en' ? 'فا' : 'EN'}
                 </div>

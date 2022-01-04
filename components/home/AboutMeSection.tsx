@@ -16,7 +16,7 @@ export default function AboutMeSection() {
         <Image src={developer1} alt="developer art graphic" />
 
         <div>
-          <h2 className="about__subtitle">{t('about.title')}</h2>
+          <h2 className="about__subtitle font-extrablack">{t('about.title')}</h2>
           <span className="about__profession">{t('about.subtitle')}</span>
 
           <p className="about__text">{t('about.text')}</p>
