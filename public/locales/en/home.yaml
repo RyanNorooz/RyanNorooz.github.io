@@ -1,0 +1,22 @@
+sections:
+  about: About Me
+  skills: Skills
+  portfolio: Portfolio
+  contact: Contact
+
+hero:
+  scrollDown: Scroll down
+
+about:
+  title: I'm Ryan Norooz
+  subtitle: Web Developer, Designer, and Entrepreneur.
+  text: >-
+    I'm Ryan Norooz and I am a full-stack web developer. I have experience in building websites and web applications using VueJS with NuxtJS and React with NextJS. I am currently looking for a position in the web development industry.
+
+skills:
+  developmentTitle: Development
+  designTitle: Design
+
+portfolio:
+  card:
+    viewDetails: View details

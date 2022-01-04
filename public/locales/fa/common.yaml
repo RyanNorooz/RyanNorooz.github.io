@@ -1,0 +1,24 @@
+header:
+  logoText: رایان نوروزی
+  nav:
+    home: خانه
+    about: درباره من
+    skills: مهارت ها
+    portfolio: پروژه ها
+    contact: ارتباط با من
+
+footer:
+  title: رایان نوروزی
+  subtitle: توسعه دهنده وب، طراح و کارآفرین.
+  nav:
+    navTitle: کاوش
+    home: خانه
+    about: درباره
+    skills: مهارت ها
+    portfolio: پروژه ها
+    contact: ارتباط با من
+  social:
+    socialTitle: به من پیام بده
+    github: گیتهاب
+    telegram: تلگرام
+    discord: دیسکورد

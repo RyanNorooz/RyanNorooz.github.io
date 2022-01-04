@@ -1,0 +1,24 @@
+header:
+  logoText: Ryan Norooz
+  nav:
+    home: Home
+    about: About
+    skills: Skills
+    portfolio: Portfolio
+    contact: Contact
+
+footer:
+  title: Ryan Norooz
+  subtitle: Web Developer, Designer, and Entrepreneur.
+  nav:
+    navTitle: EXPLORE
+    home: Home
+    about: About
+    skills: Skills
+    portfolio: Portfolio
+    contact: Contact
+  social:
+    socialTitle: REACH ME
+    github: GitHub
+    telegram: Telegram
+    discord: Discord

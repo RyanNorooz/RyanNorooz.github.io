@@ -1,0 +1,21 @@
+sections:
+  about: درباره من
+  skills: مهارت ها
+  portfolio: پروژه ها
+  contact: ارتباط با من
+
+hero:
+  scrollDown: بیا پایین
+
+about:
+  title: من رایان هستم
+  subtitle: طراح و برنامه نویس
+  text: >-
+    برنامه‌نویس فرانت‌اند وب. تجربه ساخت وب سایت و PWA با استفاده از React و Next.js رو دارم. در حال حاضر به دنبال یک موقعیت شغلی در صنعت توسعه وب هستم.
+skills:
+  developmentTitle: توسعه
+  designTitle: طراحی و دیزاین
+
+portfolio:
+  card:
+    viewDetails: جزئیات بیشتر
