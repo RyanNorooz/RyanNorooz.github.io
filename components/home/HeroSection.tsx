@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'next-i18next'
 import stickDudeArt from '@/public/img/stick-dude.png'
 import {
   setLocalStorageWithExpiry,
   getLocalStorageWithExpiry,
 } from '@/lib/logic'
-import { useTranslation } from 'next-i18next'
 
 const quotes = [
   'Thank you for invading my space.',
