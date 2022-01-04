@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
 
-  ignorePatterns: ['*.min.*'],
+  ignorePatterns: ['*.min.*', 'next-env.d.ts'],
 
   parser: '@typescript-eslint/parser',
 
