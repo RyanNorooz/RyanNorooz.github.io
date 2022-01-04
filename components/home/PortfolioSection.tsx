@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+import { useTranslation } from 'next-i18next'
 import work1 from '@/public/img/work1.jpg'
 import work2 from '@/public/img/work2.jpg'
 import work3 from '@/public/img/work3.jpg'
@@ -8,6 +9,7 @@ import work5 from '@/public/img/work5.jpg'
 import work6 from '@/public/img/work6.jpg'
 
 export default function PortfolioSection() {
+  const { t } = useTranslation('home')
   const projects = [
     {
       title: 'Project ALPHA',
@@ -55,7 +57,7 @@ export default function PortfolioSection() {
 
   return (
     <section className="portfolio section" id="portfolio">
-      <h2 className="section-title">Portfolio</h2>
+      <h2 className="section-title">{t('sections.portfolio')}</h2>
 
       <div className="portfolio__container bd-grid blur-content">
         {projects.map((project, index) => (
@@ -67,7 +69,7 @@ export default function PortfolioSection() {
               {/* <p>{project.description}</p> */}
 
               <a href={project.link} className="portfolio__link-name">
-                View details
+                {t('portfolio.card.viewDetails')}
               </a>
             </div>
           </div>

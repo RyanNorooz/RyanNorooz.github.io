@@ -6,6 +6,7 @@ import {
   setLocalStorageWithExpiry,
   getLocalStorageWithExpiry,
 } from '@/lib/logic'
+import { useTranslation } from 'next-i18next'
 
 const quotes = [
   'Thank you for invading my space.',
@@ -29,6 +30,7 @@ const quotes = [
 ]
 
 export default function HeroSection() {
+  const { t } = useTranslation('home')
   const [theQuote, setQuote] = useState<string>()
 
   // Get the quote index from local storage
@@ -57,7 +59,7 @@ export default function HeroSection() {
         <div className="home__scroll">
           <a href="#about" className="flex items-center home__scroll-link">
             <Icon icon="bx:bx-up-arrow-alt" />
-            Scroll down
+            {t('hero.scrollDown')}
           </a>
         </div>
 

@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Icon } from '@iconify/react'
-import { useEffect } from 'react'
-
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 import faviconDark from '@/public/favicon-dark.ico'
 
 function makeHeaderTransparent() {
@@ -22,6 +24,10 @@ function checkAndCloseHamburgerMenu(e: MouseEvent) {
 }
 
 export default function TheHeader() {
+  const { t } = useTranslation('common')
+  const router = useRouter()
+  const [currentPath] = useState(router.asPath)
+
   useEffect(() => {
     window.addEventListener('scroll', makeHeaderTransparent)
     window.addEventListener('click', checkAndCloseHamburgerMenu)
@@ -40,7 +46,7 @@ export default function TheHeader() {
             <Image src={faviconDark} alt="Ryan Norooz logo" />
           </div>
           <a href="#" className="nav__logo font-bold">
-            Ryan Norooz
+            {t('header.logoText')}
           </a>
         </div>
 
@@ -48,32 +54,45 @@ export default function TheHeader() {
           <ul className="nav__list">
             <li className="nav__item">
               <a href="#home" className="nav__link active">
-                Home
+                {t('header.nav.home')}
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#about" className="nav__link">
-                About
+                {t('header.nav.about')}
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#skills" className="nav__link">
-                Skills
+                {t('header.nav.skills')}
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#portfolio" className="nav__link">
-                Portfolio
+                {t('header.nav.portfolio')}
               </a>
             </li>
 
             <li className="nav__item">
               <a href="#contact" className="nav__link">
-                Contact
+                {t('header.nav.contact')}
               </a>
+            </li>
+
+            <li className="nav__item">
+              <Link
+                passHref
+                href={currentPath}
+                locale={router.locale === 'en' ? 'fa' : 'en'}
+              >
+                <div className="flex items-center gap-1 cursor-pointer font-bold">
+                  <Icon icon="bx:bx-globe" />
+                  {router.locale === 'en' ? 'فا' : 'EN'}
+                </div>
+              </Link>
             </li>
           </ul>
         </div>

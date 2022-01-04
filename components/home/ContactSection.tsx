@@ -1,9 +1,11 @@
 import { Icon } from '@iconify/react'
+import { useTranslation } from 'next-i18next'
 
 export default function ContactSection() {
+  const { t } = useTranslation('home')
   return (
     <section className="contact section" id="contact">
-      <h2 className="section-title">Contact</h2>
+      <h2 className="section-title">{t('sections.contact')}</h2>
 
       <div className="contact__container bd-grid blur-content">
         <div className="contact__info">
