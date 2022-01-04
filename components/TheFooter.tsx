@@ -36,7 +36,7 @@ export default function TheFooter() {
               </a>
             </li>
             <li>
-              <a href="#Contact" className="footer__link">
+              <a href="#contact" className="footer__link">
                 {t('footer.nav.contact')}
               </a>
             </li>
