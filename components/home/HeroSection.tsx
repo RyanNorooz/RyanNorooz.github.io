@@ -6,7 +6,7 @@ import stickDudeArt from '@/public/img/stick-dude.png'
 import {
   setLocalStorageWithExpiry,
   getLocalStorageWithExpiry,
-} from '@/lib/logic'
+} from '@/lib/utils'
 
 const quotes = [
   'Thank you for invading my space.',
